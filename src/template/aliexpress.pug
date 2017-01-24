@@ -1,0 +1,59 @@
+extends _layout.pug
+block variables
+    -var partners = ['./img/ali-grey.png','./img/gearbest.png','./img/mvideo.png'] 
+block content 
+    section.page-overview
+        img.page-overview__logo(src='./img/dnevnik-logo-new.png')
+        h1.page-overview__heading Как купить с возвратом на AliExpress
+        .page-overview-steps
+            .page-overview-step
+                img.page-overview-step__number(src='./img/number-1.png')
+                p.page-overview-step__description Войдите или зарегистрируйтесь в Дневник Шоппинг
+            .page-overview-step
+                img.page-overview-step__number(src='./img/number-2.png')
+                p.page-overview-step__description В Дневник Шоппинг выберите AliExpress, нажите активировать кэшбэк
+            .page-overview-step
+                img.page-overview-step__number(src='./img/number-3.png')
+                p.page-overview-step__description Совершите покупку на сайте AliExpress, получите часть денег обратно
+    section.ali-promo
+        img.ali-promo__logo(src='./img/ali-logo.png')
+        h2.ali-promo__heading Дневник Шоппинг с каждой покупки вам вернет деньги. В Aliexpress можно вернуть 6% от покупки.
+    section.guide
+        h3.guide__heading Покупаем смартфон на Xiaomi Redmi 4 Prо Aliexpress и возвращаем 541 рубль
+        .guide-step
+            img.guide-step__number(src='./img/number-1.png')
+            .guide-step-description
+                h4.guide-step-description__heading Входим на Дневник Шоппинг
+                p.guide-step-description__text Войти в сервис можно без регистрации, через Дневник.ру или другой популярный сайт.
+            img.guide-step__img(src='./img/first-slide.png')
+            a.guide-step__shopping-link(href="#") Войти в Дневник Шоппинг
+        .guide-step
+            img.guide-step__number(src='./img/number-2.png')
+            .guide-step-description
+                h4.guide-step__heading Выбираем магазин и активируем возврат денег (кэшбэк)
+                p.guide-step__text Выберите в списке магазинов Aliexpress и нажмите "активировать кэшбэк".
+            img.guide-step__img(src='./img/second-slide.png')
+        .guide-step
+            img.guide-step__number(src='./img/number-3.png')
+            .guide-step-description
+                h4.guide-step__heading Совершите как обычно покупку в магазине AliExpress.
+                p.guide-step__text Процент возврата и правила покупки описаны на странице магазина в сервисе Дневник Шоппинг.
+            img.guide-step__img(src='./img/third-slide.png')
+        .guide-step
+            img.guide-step__percents(src='./img/percents.png')
+            .guide-step-description
+                h4.guide-step__heading После выкупа заказа часть денег от вашей покупки вернется к вам на счет.
+                p.guide-step__text Для нашего примера сумма возврата составила:
+                    img.guide-step__text-img(src='./img/shopping.png')
+    section.ali-promo
+        img.ali-promo__logo(src='./img/ali-logo.png')
+        p.ali-promo__heading Возвращайте 6% с покупок на Aliexpress и 300 других магазинов
+        a.ali-promo__shopping-link Попробовать сервис Дневник Шоппинг
+        .ali-promo-shopping-partners
+            each image in partners
+              img.ali-promo-shopping-partners-img(src=image)
+    footer.footer
+        .footer-examples 
+            img.footer-examples__img(src='./img/question.png')
+            p.footer-examples__text Посмотреть другие примеры
+        p.footer__copyright &copy; 2007-2017 ООО "Дневник.ру"
